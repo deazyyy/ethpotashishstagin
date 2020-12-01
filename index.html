@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/toggle-switch.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
+    <title>Ethopt</title>
+</head>
+<style>
+tbody > tr {
+  cursor:pointer;
+}
+#search_results{
+ background-color: #333765;
+ border-radius: 12px;
+ margin-top: 6px;
+
+ position: absolute;
+ width: 100%
+}
+#search_results .search_results_row:last-child
+{
+    border-bottom: 0
+}
+.search_results_row{
+   color: #7a7da0;
+    padding: 8px 14px;
+    font-size: 11px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+.search_results_row:hover{
+    background-color: rgba(255,255,255,0.02);
+}
+.searchbx{
+    position: relative;
+}
+</style>
+<body class="">
+    <!-- Header -->
+    <div class="navigation-wrap start-header start-style" id="nav-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand logo-dark" href="index.html"><img src="images/logo.png" alt=""></a>
+                        <a class="navbar-brand logo-light" href="index.html"><img src="images/logo-light.png" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3">
+                                    <a class="nav-link nav-btn dashact" href="#">American Options Exchange</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group searchbx">
+                                        <div>
+                                            <input type="text" name="" aria-expanded="false" class="form-control" placeholder="Search Assets...">
+                                            <i class="fal fa-search"></i>
+                                        </div>
+                                        <div id="search_results">
+                                            <div class="search_results_row">
+                                                <span class="yeild-icon"><img src="images/cmp-icons/03.png" alt="icons"><img src="images/cmp-icons/04.png" alt="icons"></span>
+                                                BTC | USD <- big ( 1.00 BTC = 16435,47 $ )
+                                            </div>
+                                            <div class="search_results_row">
+                                                <span  class="yeild-icon"><img src="images/cmp-icons/06.png" alt="icons"><img src="images/cmp-icons/05.png" alt="icons"></span>
+                                                14bix788hkkbbiwrt
+                                            </div>
+                                            <div class="search_results_row">
+                                                <span  class="yeild-icon"><img src="images/cmp-icons/01.png" alt="icons"><img src="images/cmp-icons/06.png" alt="icons"></span>
+                                                14bix788hkkbbiwrt
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="toggle-action-bx toggle">
+                                        <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+                                        <label for="id-name--1" class="switch-label"><span class="toggle--on">Light</span><span class="toggle--off">Dark</span> Mode</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group">
+                                        <a class="nav-link timezone" href="#"><span>Nov 18, 2017, 10:20:43 CET</span> <i class="fal fa-clock"></i></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group dropdown">
+                                        <a class="nav-link timezone dropdown-toggle" data-toggle="dropdown" href="#"><i class="far fa-cog"></i></a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="javascript:void(0)" id="disconnect">Settings</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group dropdown">
+                                        <a class="nav-link timezone dropdown-toggle" data-toggle="dropdown" href="#"><i class="far fa-bell"></i></a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="javascript:void(0)" id="disconnect">Notifications</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group">
+                                        <a class="nav-link userbtn margbtn" data-toggle="dropdown" href="javascript:void(0)" id="metamask">
+                                          <img src="images/metamask.png">
+                                          <span class="account">Connect</span>
+                                          <!--<i class="far fa-angle-down"></i>-->
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Main Wrapper -->
+    <section class="main-wrapper-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <div class="left-bar-one">
+                        <div>
+
+                            <h2>Top Markets</h2>
+
+                            <div class="wish-list-bx">
+                                <ul>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span class="reddown">+14.90 (1.75%) <i class="fal fa-arrow-down"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span class="reddown">+14.90 (1.75%) <i class="fal fa-arrow-down"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span class="midcap">+14.90 (1.75%) <i class="fal fa-arrow-right"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span class="reddown">+14.90 (1.75%) <i class="fal fa-arrow-down"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li>
+                                        <h5>EOS / QAU</h5>
+                                        <h6>800.93 <span class="midcap">+14.90 (1.75%) <i class="fal fa-arrow-right"></i></span></h6>
+
+                                        <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="add-wibtn">
+                            </div>
+                        </div>
+
+                        <div class="buy-frm">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item fade" >
+                                    <a class="nav-link active" data-toggle="tab" href="#tb1">Deposit</a>
+                                </li>
+                                <li class="nav-item fade">
+                                    <a class="nav-link" data-toggle="tab" href="#tb2">Withdraw</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tb1">
+                                    <div class="frm-data-block">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Balance</label>
+                                                <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                <div class="uplbc">
+                                                    <select class="frmb">
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Amount</label>
+                                                <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                <div class="uplbc">
+                                                    <select class="frmb">
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group amtvx">
+                                                <label>Enter your amount</label>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" name="" placeholder="0.0000 BTC" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group amtvx">
+                                                <div class="row">
+                                                </div>
+                                            </div>
+
+                                            <button class="btn-main">Deposit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tb2">
+                                    <div class="frm-data-block">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Balance</label>
+                                                <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                <div class="uplbc">
+                                                    <select class="frmb">
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Amount</label>
+                                                <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                <div class="uplbc">
+                                                    <select class="frmb">
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                        <option>BTC</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group amtvx">
+                                                <label>Enter your amount</label>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" name="" placeholder="0.0000 BTC" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group amtvx">
+                                                <div class="row">
+                                                </div>
+                                            </div>
+
+                                            <button class="btn-main">Withdraw</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-7">
+                    <div class="center-graphblock">
+                        <div class="graph-block" id="gb">
+                            <!-- <img src="images/grap-png.png" alt=""> -->
+							<div class="chart_Heading">ETH /EOS</div>
+							<div id="chartdiv"></div>
+							<div id="controls"></div>
+                        </div>
+
+                        <div class="orderbook" id="obOuter">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="order-bok-head">
+                                        <h3>Orderbook</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-8">
+                                    <div class="order-tg">
+                                        <div class="ortglbx">
+                                            <div class="btn-container">
+                                                <label class="switch btn-color-mode-switch">
+                                                    <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                                                    <label for="color_mode" data-on="Sell" data-off="Buy" class="btn-color-mode-switch-inner"></label>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="ortglbx">
+                                            <div class="btn-container">
+                                                <label class="switch btn-color-mode-switch">
+                                                    <input type="checkbox" name="color_mode2" id="color_mode2" value="1">
+                                                    <label for="color_mode2" data-on="Put" data-off="Call" class="btn-color-mode-switch-inner"></label>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-table-dta">
+                                <table class="table header-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Volum / Open Int</th>
+                                            <th>Bid / Bid Size</th>
+                                            <th>Ask / Ask Size</th>
+                                            <th>Change / % Change</th>
+                                            <th>Change / % Change</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                         <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                         <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                         <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                         <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                         <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100 / 732</td>
+                                            <td><span class="green">5.50</span> / 393</td>
+                                            <td><span class="red">5.55</span> / 154</td>
+                                            <td>0.16 / 3.17%</td>
+                                            <td>112.00 / Nov 20, 2017</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="order-bar right-bar">
+                        <div>
+                            <div class="right-order-hed poisition-bx">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="title-right">
+                                            <h3>Create Order</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        <div class="order-tg">
+                                            <div class="ortglbx">
+                                                <div class="btn-container">
+                                                    <label class="switch btn-color-mode-switch">
+                                                        <input type="checkbox" name="color_mode3" id="color_mode3" value="1">
+                                                        <label for="color_mode3" data-on="Sell" data-off="Buy" class="btn-color-mode-switch-inner"></label>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="ortglbx">
+                                                <div class="btn-container">
+                                                    <label class="switch btn-color-mode-switch">
+                                                        <input type="checkbox" name="color_mode4" id="color_mode4" value="1">
+                                                        <label for="color_mode4" data-on="Put" data-off="Call" class="btn-color-mode-switch-inner"></label>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="frm-data-block">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Expiration</label>
+                                        <input type="date" name="" placeholder="0.00 USD" class="form-control">
+                                    </div>
+                                    <div class="form-group pricevx">
+                                        <label>Stake Price</label>
+                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                        <span class="usd-prc">USD</span>
+                                    </div>
+                                    <div class="form-group pricevx">
+                                        <label>Amount</label>
+                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                        <span class="usd-prc">BTC</span>
+                                    </div>
+                                    <div class="form-group amtvx">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <p>Total</p>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="eth-right">
+                                                    <h6>0 / $0.00 USD</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <p>ETH:</p>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="eth-right">
+                                                    <h6>0 / $0.00 USD</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn-main">Buy ETH Call</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 30px">
+                            <div class="right-order-hed position-head">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="title-right">
+                                            <h3>Place Order</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        <div class="order-tg">
+                                            <div class="ortglbx">
+                                                <div class="btn-container">
+                                                    <label class="switch btn-color-mode-switch">
+                                                        <input type="checkbox" name="color_mode7" id="color_mode7" value="1">
+                                                        <label for="color_mode7" data-on="History" data-off="Positions" class="btn-color-mode-switch-inner"></label>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-table-dta">
+                                <table class="table header-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Volume</th>
+                                            <th>Value</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                         <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                         <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                         <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                         <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.02234</td>
+                                            <td>$921.79</td>
+                                            <td>04 / 18 / 17</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dialog" title="Place Order" style="background-color:#25284c;">
+          <div class="buy-frm">
+
+                                      <div class="tab-content">
+                                          <div class="tab-pane active" id="tb1">
+                                              <div class="frm-data-block">
+                                                  <form>
+                                                      <div class="form-group">
+                                                          <label>Amount</label>
+                                                          <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                          <div class="uplbc">
+                                                              <select class="frmb">
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label>Payment Method</label>
+                                                          <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                          <div class="uplbc">
+                                                              <select class="frmb">
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group amtvx">
+                                                          <label>Enter your amount</label>
+
+                                                          <div class="row">
+                                                              <div class="col-md-6 col-sm-6">
+                                                                  <input type="text" name="" placeholder="0.0000 BTC" class="form-control">
+                                                              </div>
+                                                              <div class="col-md-6 col-sm-6">
+                                                                  <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group amtvx">
+                                                      </div>
+
+                                                      <button class="btn-main">Exchange Now</button>
+                                                  </form>
+                                              </div>
+                                          </div>
+                                          <div class="tab-pane fade" id="tb2">
+                                              <div class="frm-data-block">
+                                                  <form>
+                                                      <div class="form-group">
+                                                          <label>Amount</label>
+                                                          <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                          <div class="uplbc">
+                                                              <select class="frmb">
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label>Payment Method</label>
+                                                          <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                                          <div class="uplbc">
+                                                              <select class="frmb">
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                                  <option>BTC</option>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group amtvx">
+                                                          <label>Enter your amount</label>
+
+                                                          <div class="row">
+                                                              <div class="col-md-6 col-sm-6">
+                                                                  <input type="text" name="" placeholder="0.0000 BTC" class="form-control">
+                                                              </div>
+                                                              <div class="col-md-6 col-sm-6">
+                                                                  <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group amtvx">
+                                                          <div class="row">
+                                                              <div class="col-md-6 col-sm-6">
+                                                                  <p>Monthly Limit</p>
+                                                              </div>
+                                                              <div class="col-md-6 col-sm-6">
+                                                                  <h6>$49750 remaining</h6>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+
+                                                      <button class="btn-main">Exchange Now</button>
+                                                  </form>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>        </div>
+    </section>
+    <!-- End Main Wrapper -->
+    <script type="text/javascript" src="js/chart/core.js"></script>
+    <script type="text/javascript" src="js/chart/charts.js"></script>
+    <script type="text/javascript" src="js/chart/rangeSelector.js"></script>
+    <script type="text/javascript" src="js/chart/frozen.js"></script>
+    <script type="text/javascript" src="js/chart/animated.js"></script>
+     <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/8db2e95406.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script src="https://cdn.rawgit.com/MikeMcl/bignumber.js/7269d028/bignumber.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        const toggle = document.querySelector('#id-name--1');
+
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('light-theme');
+        })
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            var nav = document.getElementById("nav-wrap");
+            var height = $(window).height() - nav.offsetHeight;
+            $('.main-wrapper-block').height(height);
+        });
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+             var nav = document.getElementById("nav-wrap");
+            var gb = document.getElementById("gb");
+             var obOuter = document.getElementById("obOuter");
+            var height = $(window).height() - gb.offsetHeight -obOuter.offsetHeight  - nav.offsetHeight;
+            // $('.orderbook').css('margin-top',height);
+        });
+        $( ".wish-list-bx li" ).hover(
+            function() {
+             $( this).find('.fa-star').removeClass('far');
+             $( this).find('.fa-star').addClass('fa');
+            },
+             function() {
+             $( this).find('.fa-star').removeClass('fa');
+             $( this).find('.fa-star').addClass('far');
+            }
+        );
+    </script>
+    <script>
+    $('#obOuter > div.order-table-dta > table > tbody > tr').on('click', function(){
+      $( "#dialog" ).dialog( "open" );
+    });
+    $( function() {
+   $( "#dialog" ).dialog({
+     autoOpen: false,
+     show: {
+       effect: "blind",
+       duration: 500
+     },
+     hide: {
+       effect: "blind",
+       duration: 500
+     }
+   });
+ });
+    </script>
+</body>
+</html>

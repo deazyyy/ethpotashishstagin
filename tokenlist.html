@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/toggle-switch.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
+    <title>EThopt</title>
+</head>
+<body class="tokenlist">
+    <div class="modal buy-n-sell" id="buy-sel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="pop-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="buy-head">Buy / Sell</h4>
+                <div class="buy-frm">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tb1">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tb2">Sell</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tb1">
+                            <div class="frm-data-block">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Amount</label>
+                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                        <div class="uplbc">
+                                            <select class="frmb">
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Payment Method</label>
+                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                        <div class="uplbc">
+                                            <select class="frmb">
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group amtvx">
+                                        <label>Enter your amount</label>
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <input type="text" name="" placeholder="0.0000 BTC" class="form-control">
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group amtvx">
+                                        <div class="d-flex justify-content-between">
+                                                <p>Monthly Limit</p>
+                                                <h6>$49750 remaining</h6>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn-main">Exchange Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tb2">
+                            <div class="frm-data-block">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Amount</label>
+                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                        <div class="uplbc">
+                                            <select class="frmb">
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Payment Method</label>
+                                        <input type="text" name="" placeholder="0.00 USD" class="form-control">
+
+                                        <div class="uplbc">
+                                            <select class="frmb">
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                                <option>BTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group amtvx">
+                                        <label>Enter your amount</label>
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <input type="text" name="" placeholder="0.0000 BTC" class="form-control">
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input type="text" name="" placeholder="0.00 USD" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group amtvx">
+                                        <div class="d-flex justify-content-between">
+                                                <p>Monthly Limit</p>
+                                                <h6>$49750 remaining</h6>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn-main">Exchange Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- popup -->
+
+    <!-- Header -->
+    <div class="navigation-wrap start-header start-style inner-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand logo-dark" href="index.html"><img src="images/logo.png" alt=""></a>  
+                        <a class="navbar-brand logo-light" href="index.html"><img src="images/logo-light.png" alt=""></a>       
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3">
+                                    <a class="nav-link nav-btn dashact" href="#">Tokenlist</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group searchbx">
+                                        <input type="text" name="" class="form-control" placeholder="Search Assets...">
+                                        <i class="fal fa-search"></i>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="toggle-action-bx toggle">
+                                        <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+                                        <label for="id-name--1" class="switch-label"><span class="toggle--on">Light</span><span class="toggle--off">Dark</span> Mode</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group">
+                                        <a class="nav-link timezone" href="#"><span>Nov 18, 2017, 10:20:43 CET</span> <i class="fal fa-clock"></i></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group">
+                                        <a class="nav-link timezone" href="#"><i class="far fa-bell"></i></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 last-r">
+                                    <div class="form-group dropdown">
+                                        <a class="nav-link userbtn margbtn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><img src="images/user-icon.png" alt=""> Ice Cube <i class="far fa-angle-down"></i></a>
+
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Link 1</a>
+                                            <a class="dropdown-item" href="#">Link 2</a>
+                                            <a class="dropdown-item" href="#">Link 3</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </nav>      
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Main Wrapper -->
+    <section class="main-wrapper-block inner-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <div class="left-bar-one tokenlist">
+                        <h2>Watchlist</h2>
+
+                        <div class="wish-list-bx">
+                            <ul>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span>+14.90 (1.75%) <i class="fal fa-arrow-up"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span class="reddown">+14.90 (1.75%) <i class="fal fa-arrow-down"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                 <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span class="reddown">+14.90 (1.75%) <i class="fal fa-arrow-down"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                                <li>
+                                    <h5>EOS / QAU</h5>
+                                    <h6>800.93 <span class="midcap">+14.90 (1.75%) <i class="fal fa-arrow-right"></i></span></h6>
+
+                                    <a href="#" class="rated"><i class="far fa-star"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="add-wibtn">
+                            <a href="#">+ Add to your watchlist</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-10">
+                    <div class="center-graphblock">
+                        <div class="orderbook">
+                            <div class="order-table-dta">
+                                <table class="table header-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>Headline 1</th>
+                                            <th>Headline 2</th>
+                                            <th>Headline 3</th>
+                                            <th>Headline 4</th>
+                                            <th>Headline 5</th>
+                                            <th>Headline 6</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth reddo"><i class="fal fa-arrow-down"></i></div></td>
+                                            <td><label class="sold">Sold</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="red">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#buy-sel">
+                                            <td><div class="groth"><i class="fal fa-arrow-up"></i></div></td>
+                                            <td><label>Buy</label></td>
+                                            <td><img src="images/bit-coin.png" alt=""> BTC</td>
+                                            <td>Using - Bank ********5264</td>
+                                            <td><span class="green">-0.000242 BTC</span></td>
+                                            <td>-0.125 USD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Main Wrapper -->
+
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script> 
+    <script type="text/javascript" src="js/popper.min.js"></script> 
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/8db2e95406.js"></script>
+    <script type="text/javascript">
+        const toggle = document.querySelector('#id-name--1');
+
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('light-theme');
+        })
+
+        $( ".wish-list-bx li" ).hover(
+            function() {
+             $( this).find('.fa-star').removeClass('far');
+             $( this).find('.fa-star').addClass('fa');
+            },
+             function() {
+             $( this).find('.fa-star').removeClass('fa');
+             $( this).find('.fa-star').addClass('far');
+            }
+        );
+       
+    </script>
+</body>
+</html>
